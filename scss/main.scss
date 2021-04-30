@@ -1,0 +1,48 @@
+$primaryOne: rgb(0, 209, 216);
+$fontColor: #fff;
+$fontFamily: monospace;
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamily;
+}
+
+.info {
+  @include flexCenter();
+  background-color: $primaryOne;
+  padding: 50px;
+  color: $fontColor;
+
+  h1 {
+    font-size: 40px;
+    padding: 10px;
+  }
+}
+
+.rowOne,
+.rowTwo {
+  display: flex;
+  @include flexCenter();
+
+  .colors {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border-radius: 15%;
+  }
+}
+
+.palete {
+  margin-top: 70px;
+}
+
+.main {
+  display: flex;
+}
